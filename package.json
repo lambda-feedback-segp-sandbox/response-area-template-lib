@@ -1,6 +1,6 @@
 {
   "name": "@lambda-feedback-segp-sandbox/response-area-template-lib",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,ts,tsx}\"",
     "lint": "eslint .",
@@ -9,7 +9,7 @@
     "test": "yarn test:types && yarn lint --max-warnings=0"
   },
   "dependencies": {
-    "@lambda-feedback-segp-sandbox/styles": "^1.0.4",
+    "@lambda-feedback-segp-sandbox/styles": "^1.1.0",
     "react": "^18.3.1"
   },
   "devDependencies": {
