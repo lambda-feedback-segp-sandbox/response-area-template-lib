@@ -47,3 +47,7 @@ export const AllActionButtonsEnabledStory: Story = {
 export const ExploreActionButtonDisabledStory: Story = {
   args: { actionButtonsState: ActionButtonsState.ExploreDisabled },
 }
+
+export const AllActionButtonsDisabledStory: Story = {
+  args: { actionButtonsState: ActionButtonsState.AllDisabled },
+}

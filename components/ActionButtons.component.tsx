@@ -10,11 +10,13 @@ export enum ActionButton {
 }
 
 export interface ActionButtonsProps {
-  exploreDisabled: boolean
-  handleButtonClick: (button: ActionButton) => void
+  disabled?: boolean
+  exploreDisabled?: boolean
+  handleButtonClick?: (button: ActionButton) => void
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  disabled,
   exploreDisabled,
   handleButtonClick,
 }) => (
@@ -22,34 +24,37 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     <Button
       variant="outlined"
       endIcon={<Tune />}
-      onClick={() => handleButtonClick(ActionButton.Configure)}
-      sx={commonButtonStyles}>
+      onClick={() => handleButtonClick?.(ActionButton.Configure)}
+      sx={commonButtonStyles}
+      disabled={disabled}>
       Configure
     </Button>
     <Button
       variant="outlined"
       endIcon={<BarChart />}
-      onClick={() => handleButtonClick(ActionButton.Explore)}
+      onClick={() => handleButtonClick?.(ActionButton.Explore)}
       sx={commonButtonStyles}
-      disabled={exploreDisabled}>
+      disabled={disabled || exploreDisabled}>
       Explore
     </Button>
     <Button
       variant="outlined"
       endIcon={<ContentCopy />}
-      onClick={() => handleButtonClick(ActionButton.Duplicate)}
-      sx={commonButtonStyles}>
+      onClick={() => handleButtonClick?.(ActionButton.Duplicate)}
+      sx={commonButtonStyles}
+      disabled={disabled}>
       Duplicate
     </Button>
     <Button
       color="error"
       variant="outlined"
       endIcon={<Delete />}
-      onClick={() => handleButtonClick(ActionButton.Delete)}
+      onClick={() => handleButtonClick?.(ActionButton.Delete)}
       sx={{
         ...commonButtonStyles,
         width: '100%',
-      }}>
+      }}
+      disabled={disabled}>
       Delete
     </Button>
     <Button />

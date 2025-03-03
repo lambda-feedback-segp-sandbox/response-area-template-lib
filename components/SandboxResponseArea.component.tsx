@@ -11,8 +11,9 @@ import { NotAvailableDialog } from './NotAvailableDialog.component'
 
 export enum ActionButtonsState {
   Hidden,
-  ExploreDisabled,
   AllEnabled,
+  ExploreDisabled,
+  AllDisabled,
 }
 
 export interface SandboxResponseAreaProps
@@ -43,6 +44,7 @@ export const SandboxResponseArea: React.FC<SandboxResponseAreaProps> = ({
         ActionButtons={
           actionButtonsState == ActionButtonsState.Hidden ? null : (
             <ActionButtons
+              disabled={actionButtonsState == ActionButtonsState.AllDisabled}
               exploreDisabled={
                 actionButtonsState == ActionButtonsState.ExploreDisabled
               }
