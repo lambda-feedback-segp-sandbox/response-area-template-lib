@@ -13,10 +13,15 @@ import type { AllowOverrides } from '../types/allow-overrides'
 
 type OverridableInputProps = 'handleChange'
 
+export type InitialisedInputProps = AllowOverrides<
+  BaseResponseAreaProps,
+  OverridableInputProps
+>
+
 export function createInitialisedInput<T extends ResponseAreaTub>(
   createTub: () => T,
   propOverrides?: Partial<Pick<BaseResponseAreaProps, OverridableInputProps>>,
-): React.FC<AllowOverrides<BaseResponseAreaProps, OverridableInputProps>> {
+): React.FC<InitialisedInputProps> {
   return props => {
     type Response = z.infer<T['answerSchema']>
 
@@ -60,14 +65,17 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
 
 type OverridableWizardProps = 'handleChange' | 'setAllowSave'
 
+export type InitialisedWizardProps = AllowOverrides<
+  BaseResponseAreaWizardProps,
+  OverridableWizardProps
+>
+
 export function createInitialisedWizard<T extends ResponseAreaTub>(
   createTub: () => T,
   propOverrides?: Partial<
     Pick<BaseResponseAreaWizardProps, OverridableWizardProps>
   >,
-): React.FC<
-  AllowOverrides<BaseResponseAreaWizardProps, OverridableWizardProps>
-> {
+): React.FC<InitialisedWizardProps> {
   return props => {
     const tub = useRef(createTub())
 
