@@ -11,7 +11,8 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
   const shadowTub = createTub()
   const tub = createTub()
 
-  tub.InputComponent = createInitialisedInput(() => shadowTub)
+  const InitialisedInput = createInitialisedInput(() => shadowTub)
+  tub.InputComponent = props => <InitialisedInput {...props} />
 
   return {
     title: 'Response Area',
