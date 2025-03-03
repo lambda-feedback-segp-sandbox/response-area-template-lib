@@ -13,4 +13,4 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
 
 type Story = StoryObj<ReturnType<typeof createMeta>>
 
-export const Default: Story = {}
+export const DefaultStory: Story = {}

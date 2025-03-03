@@ -36,11 +36,11 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
 
 type Story = StoryObj<ReturnType<typeof createMeta>>
 
-export const StudentView: Story = {
+export const StudentViewStory: Story = {
   args: { actionButtonsState: ActionButtonsState.Hidden },
 }
 
-export const TeacherView: Story = {
+export const TeacherViewStory: Story = {
   args: {
     actionButtonsState: ActionButtonsState.AllEnabled,
   },
