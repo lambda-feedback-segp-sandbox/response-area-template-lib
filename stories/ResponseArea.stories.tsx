@@ -1,5 +1,5 @@
 import type { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
-import type { Meta, StoryObj } from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 
 import {
   ActionButtonsState,
@@ -31,7 +31,7 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
       showLivePreview: true,
       visibleSymbols: [],
       wrapLabel: 'Area Label',
-    } satisfies Meta<typeof SandboxResponseArea>,
+    },
   }
 }
 
