@@ -30,8 +30,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
       variant="outlined"
       endIcon={<BarChart />}
       onClick={() => handleButtonClick(ActionButton.Explore)}
-      sx={commonButtonStyles}>
-      disabled={exploreDisabled}
+      sx={commonButtonStyles}
+      disabled={exploreDisabled}>
       Explore
     </Button>
     <Button
