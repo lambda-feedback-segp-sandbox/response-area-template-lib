@@ -19,7 +19,7 @@ export enum ActionButtonsState {
 export interface SandboxResponseAreaProps
   extends AllowOverrides<
     ResponseAreaViewProps,
-    'handleCheck' | 'handleDraftSave'
+    'handleChange' | 'handleCheck' | 'handleDraftSave'
   > {
   actionButtonsState: ActionButtonsState
 }
@@ -54,6 +54,7 @@ export const SandboxResponseArea: React.FC<SandboxResponseAreaProps> = ({
         }
         handleCheck={() => handleButtonClick('Check')}
         handleDraftSave={() => handleButtonClick('Save')}
+        handleChange={() => {}}
         {...props}
       />
       <NotAvailableDialog
