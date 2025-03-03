@@ -31,7 +31,7 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
       showLivePreview: true,
       visibleSymbols: [],
       wrapLabel: 'Area Label',
-    } satisfies Meta,
+    } satisfies Meta<typeof SandboxResponseArea>,
   }
 }
 
