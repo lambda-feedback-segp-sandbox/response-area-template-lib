@@ -40,8 +40,10 @@ export const StudentViewStory: Story = {
   args: { actionButtonsState: ActionButtonsState.Hidden },
 }
 
-export const TeacherViewStory: Story = {
-  args: {
-    actionButtonsState: ActionButtonsState.AllEnabled,
-  },
+export const AllActionButtonsEnabledStory: Story = {
+  args: { actionButtonsState: ActionButtonsState.AllEnabled },
+}
+
+export const ExploreActionButtonDisabledStory: Story = {
+  args: { actionButtonsState: ActionButtonsState.ExploreDisabled },
 }
