@@ -9,10 +9,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import type { z } from 'zod'
 
 import { INPUT_KEY, WIZARD_KEY } from '../constants'
+import type { AllowOverrides } from '../types/allow-overrides'
 
 export function createInitialisedInput<T extends ResponseAreaTub>(
   createTub: () => T,
-): React.FC<BaseResponseAreaProps> {
+): React.FC<AllowOverrides<BaseResponseAreaProps, 'handleChange'>> {
   return props => {
     type Response = z.infer<T['answerSchema']>
 
@@ -44,10 +45,10 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
 
     return (
       <tub.current.InputComponent
-        {...props}
         handleChange={handleChange}
         answer={response}
         config={tub.current.config ?? undefined}
+        {...props}
       />
     )
   }
@@ -55,7 +56,9 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
 
 export function createInitialisedWizard<T extends ResponseAreaTub>(
   createTub: () => T,
-): React.FC<BaseResponseAreaWizardProps> {
+): React.FC<
+  AllowOverrides<BaseResponseAreaWizardProps, 'handleChange' | 'setAllowSave'>
+> {
   return props => {
     const tub = useRef(createTub())
 
@@ -83,9 +86,9 @@ export function createInitialisedWizard<T extends ResponseAreaTub>(
 
     return (
       <tub.current.WizardComponent
-        {...props}
         handleChange={handleChange}
         setAllowSave={_ => {}}
+        {...props}
       />
     )
   }
