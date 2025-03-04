@@ -1,5 +1,5 @@
 import type { ResponseAreaTub } from '@lambda-feedback-segp-sandbox/response-area-base'
-import type { StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 import {
   ActionButtonsState,
@@ -76,8 +76,15 @@ interface CustomFeedbackStoryArgs extends SandboxResponseAreaProps {
   feedbackIsError: boolean
 }
 
-export const CustomFeedbackStory: Story = {
-  args: { actionButtons: ActionButtonsState.Hidden },
+export const CustomFeedbackStory: StoryObj<
+  Meta<React.FC<CustomFeedbackStoryArgs>>
+> = {
+  args: {
+    actionButtonsState: ActionButtonsState.Hidden,
+    feedbackText: "Set this feedback text in the 'Controls' tab below.",
+    feedbackIsCorrect: true,
+    feedbackIsError: false,
+  },
   argTypes: {
     ...defaultDisabledArgTypes,
     postResponseText: { table: { disable: true } },
