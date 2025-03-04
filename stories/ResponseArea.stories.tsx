@@ -32,6 +32,20 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
       visibleSymbols: [],
       wrapLabel: 'Area Label',
     },
+    argTypes: {
+      actionButtonsState: { table: { disable: true } },
+      displayInputSymbols: { table: { disable: true } },
+      displayMode: { table: { disable: true } },
+      feedback: { table: { disable: true } },
+      inFlight: { table: { disable: true } },
+      inputDisplayValue: { table: { disable: true } },
+      inputType: { table: { disable: true } },
+      responseAreaId: { table: { disable: true } },
+      universalResponseAreaId: { table: { disable: true } },
+      showLivePreview: { table: { disable: true } },
+      visibleSymbols: { table: { disable: true } },
+      tub: { table: { disable: true } },
+    },
   }
 }
 
