@@ -4,6 +4,7 @@ import type { StoryObj } from '@storybook/react'
 import {
   ActionButtonsState,
   SandboxResponseArea,
+  SandboxResponseAreaProps,
   createInitialisedInput,
 } from '../components'
 
@@ -69,6 +70,12 @@ export const AllActionButtonsDisabledStory: Story = {
   args: { actionButtonsState: ActionButtonsState.AllDisabled },
 }
 
+interface CustomFeedbackStoryArgs extends SandboxResponseAreaProps {
+  feedbackText: string
+  feedbackIsCorrect: boolean
+  feedbackIsError: boolean
+}
+
 export const CustomFeedbackStory: Story = {
   args: { actionButtons: ActionButtonsState.Hidden },
   argTypes: {
@@ -76,5 +83,14 @@ export const CustomFeedbackStory: Story = {
     postResponseText: { table: { disable: true } },
     preResponseText: { table: { disable: true } },
     wrapLabel: { table: { disable: true } },
+  },
+  render: (args: CustomFeedbackStoryArgs) => {
+    const feedback = {
+      isCorrect: args.feedbackIsCorrect,
+      isError: args.feedbackIsError,
+      feedback: args.feedbackText,
+      color: args.feedbackIsCorrect ? 'green' : 'red',
+    }
+    return <SandboxResponseArea {...args} feedback={feedback} />
   },
 }
