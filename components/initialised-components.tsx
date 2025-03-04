@@ -10,6 +10,7 @@ import type { z } from 'zod'
 
 import { INPUT_KEY, WIZARD_KEY } from '../constants'
 import type { AllowOverrides } from '../types/allow-overrides'
+import { useForceRerender } from '../utils/use-force-rerender'
 
 type OverridableInputProps = 'handleChange'
 
@@ -26,6 +27,7 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
     type Response = z.infer<T['answerSchema']>
 
     const [response, setResponse] = useState<Response | null>()
+    const rerender = useForceRerender()
 
     const tub = useRef(createTub())
 
@@ -43,7 +45,9 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
           setResponse(storedResponse)
         }
       }
-    }, [response])
+
+      rerender()
+    }, [rerender, response])
 
     const handleChange = (newResponse: Response) => {
       sessionStorage.setItem(INPUT_KEY, JSON.stringify(newResponse))

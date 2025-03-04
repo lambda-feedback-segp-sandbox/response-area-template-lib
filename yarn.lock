@@ -865,10 +865,10 @@
     react-query "^3.39.0"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/icon-components@^1.0.0":
-  version "1.0.0"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/icon-components/1.0.0/cd4c7d741592e3ac58d649029d2f2bb2e98b3cf6#cd4c7d741592e3ac58d649029d2f2bb2e98b3cf6"
-  integrity sha512-pCKZTxqQ3SOYPdo0UsCtkj7QNLu5XgM86o0tgpoeYp+875hGDJP/Rqkh3gjk4hmdHoITSQvCh2/j1HrOPo3FQQ==
+"@lambda-feedback-segp-sandbox/icon-components@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/icon-components/1.0.1/99d22420d28fae22f329cff84de26311668a34de#99d22420d28fae22f329cff84de26311668a34de"
+  integrity sha512-X6R11lpgex3VUZ0bxocwdhqQQS4TKM1Es7skYLwypLMOWbuJu+FJSp1WDEgjc+leOJk+V+soTlyxb2yHYakzPA==
   dependencies:
     "@lambda-feedback-segp-sandbox/styles" "^1.0.0"
     "@mui/material" "^5.15.20"
@@ -896,28 +896,29 @@
     markdown-to-jsx "^7.1.7"
     react "^18.3.1"
 
-"@lambda-feedback-segp-sandbox/response-area-base@^3.2.0":
-  version "3.2.1"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/3.2.1/1b0da232be3c8d0761ffda95590643820506caa3#1b0da232be3c8d0761ffda95590643820506caa3"
-  integrity sha512-45tJzb2k/ClQc8yLZhL5BEEj+uUp3ePlyljUu/nFxJh+Hj1lkm/9EUKsRT27/qXFwXB4MeMzt7Ah/VZ0HEzHkw==
+"@lambda-feedback-segp-sandbox/response-area-base@^3.3.0":
+  version "3.3.0"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area-base/3.3.0/2725704633f7dc72b6339aa5d36c9bccd9b035f7#2725704633f7dc72b6339aa5d36c9bccd9b035f7"
+  integrity sha512-4bssfIMuJS4uP5Jk2RIhwOeRoooyRxcvcYsyN9bxhTNXhDX9iMqnbUBANF+Simvd7CNLHNMa1JvB9n4xPspeIg==
   dependencies:
     "@lambda-feedback-segp-sandbox/graphql-api" "^1.0.0"
     react "^18.3.1"
     react-query "^3.39.0"
+    typedoc "^0.27.9"
     zod "^3.14.4"
 
-"@lambda-feedback-segp-sandbox/response-area@^1.3.5":
-  version "1.3.5"
-  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area/1.3.5/0ee11a861083e0d2cb2a6a7c105df3fc849ac5b8#0ee11a861083e0d2cb2a6a7c105df3fc849ac5b8"
-  integrity sha512-bZ7pTMk8G2/wwQRXjVskKrSnHg0ofjPBntkJ9Kf5qe03fwfJWOZPgHuk40RUXXGUEjC4c4CKLeUoxKR0wIm3ww==
+"@lambda-feedback-segp-sandbox/response-area@^1.3.11":
+  version "1.3.11"
+  resolved "https://npm.pkg.github.com/download/@lambda-feedback-segp-sandbox/response-area/1.3.11/485ddd7770a401f99379c2d700bc833d33d81a39#485ddd7770a401f99379c2d700bc833d33d81a39"
+  integrity sha512-PxNn1gMPuPYZmSMyx0AEJu+lFHIuiYDfxb7k6Ezu+D5D/x8RXUUEK8jxux8S88vjbAt+OjIEZznoZquC4g1TdQ==
   dependencies:
     "@lambda-feedback-segp-sandbox/content-components" "^1.0.1"
     "@lambda-feedback-segp-sandbox/form-components" "^1.1.1"
     "@lambda-feedback-segp-sandbox/graphql-api" "^1.0.0"
-    "@lambda-feedback-segp-sandbox/icon-components" "^1.0.0"
+    "@lambda-feedback-segp-sandbox/icon-components" "^1.0.1"
     "@lambda-feedback-segp-sandbox/loading-components" "^1.0.0"
     "@lambda-feedback-segp-sandbox/math-components" "^1.0.0"
-    "@lambda-feedback-segp-sandbox/response-area-base" "^3.2.0"
+    "@lambda-feedback-segp-sandbox/response-area-base" "^3.3.0"
     "@lambda-feedback-segp-sandbox/styles" "^1.0.0"
     "@monaco-editor/react" "^4.6.0"
     "@mui/lab" "^5.0.0-alpha.100"
@@ -1611,9 +1612,9 @@
   integrity sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==
 
 "@types/node@>=12.12.47", "@types/node@>=13.7.0":
-  version "22.13.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.8.tgz#57e2450295b33a6518d6fd4f65f47236d3e41d8d"
-  integrity sha512-G3EfaZS+iOGYWLLRCEAXdWK9my08oHNZ+FHluRiggIYJPOXzhOiDgpVCUHaUvyIC5/fj7C/p637jdzC666AOKQ==
+  version "22.13.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.9.tgz#5d9a8f7a975a5bd3ef267352deb96fb13ec02eca"
+  integrity sha512-acBjXdRJ3A6Pb3tqnw9HZmyR3Fiol3aGxRCK1x3d+6CDAMjl7I649wpSd+yNURCjbOUGu9tqtLKnTGxmK6CyGw==
   dependencies:
     undici-types "~6.20.0"
 
@@ -2042,12 +2043,12 @@ call-bind@^1.0.7, call-bind@^1.0.8:
     set-function-length "^1.2.2"
 
 call-bound@^1.0.2, call-bound@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/call-bound/-/call-bound-1.0.3.tgz#41cfd032b593e39176a71533ab4f384aa04fd681"
-  integrity sha512-YTd+6wGlNlPxSuri7Y6X8tY2dmm12UMH66RpKMhiX6rsk5wXXnYgbUcOt8kiS31/AjfoTOvCsE+w8nZQLQnzHA==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/call-bound/-/call-bound-1.0.4.tgz#238de935d2a2a692928c538c7ccfa91067fd062a"
+  integrity sha512-+ys997U96po4Kx/ABpBCqhA9EuxJaQWDQg7295H4hBphv3IZg0boBKuwYpt4YXp6MZ5AmZQnU/tyMTlRpaSejg==
   dependencies:
-    call-bind-apply-helpers "^1.0.1"
-    get-intrinsic "^1.2.6"
+    call-bind-apply-helpers "^1.0.2"
+    get-intrinsic "^1.3.0"
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -2055,9 +2056,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001579:
-  version "1.0.30001701"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001701.tgz#ad9c90301f7153cf6b3314d16cc30757285bf9e7"
-  integrity sha512-faRs/AW3jA9nTwmJBSO1PQ6L/EOgsB5HMQQq4iCu5zhPgVVgO/pZRHlmatwijZKetFw8/Pr4q6dEN8sJuq8qTw==
+  version "1.0.30001702"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001702.tgz#cde16fa8adaa066c04aec2967b6cde46354644c4"
+  integrity sha512-LoPe/D7zioC0REI5W73PeR1e1MLCipRGq/VkovJnd6Df+QVqT+vT33OXCp8QUd7kA7RZrHWxb1B36OQKI/0gOA==
 
 ccount@^2.0.0:
   version "2.0.1"
@@ -2933,7 +2934,7 @@ get-caller-file@^2.0.5:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
 
-get-intrinsic@^1.2.4, get-intrinsic@^1.2.5, get-intrinsic@^1.2.6, get-intrinsic@^1.2.7:
+get-intrinsic@^1.2.4, get-intrinsic@^1.2.5, get-intrinsic@^1.2.6, get-intrinsic@^1.2.7, get-intrinsic@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.3.0.tgz#743f0e3b6964a93a5491ed1bffaae054d7f98d01"
   integrity sha512-9fSjSaos/fRIVIp+xSJlE6lfwhES7LNtKaCBIamHsjr2na1BiABJPo0mOjjz8GJDURarmCPGqaiVg5mfjb98CQ==
@@ -4511,9 +4512,9 @@ prosemirror-model@^1.0.0, prosemirror-model@^1.18.1, prosemirror-model@^1.20.0, 
     orderedmap "^2.0.0"
 
 prosemirror-schema-list@^1.2.2:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/prosemirror-schema-list/-/prosemirror-schema-list-1.5.0.tgz#f05ddbe2e71efc9157a0dbedf80761c08bda5192"
-  integrity sha512-gg1tAfH1sqpECdhIHOA/aLg2VH3ROKBWQ4m8Qp9mBKrOxQRW61zc+gMCI8nh22gnBzd1t2u1/NPLmO3nAa3ssg==
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/prosemirror-schema-list/-/prosemirror-schema-list-1.5.1.tgz#5869c8f749e8745c394548bb11820b0feb1e32f5"
+  integrity sha512-927lFx/uwyQaGwJxLWCZRkjXG0p48KpMj6ueoYiu4JX05GGuGcgzAy62dfiV8eFZftgyBUvLx76RsMe20fJl+Q==
   dependencies:
     prosemirror-model "^1.0.0"
     prosemirror-state "^1.0.0"
@@ -4529,16 +4530,16 @@ prosemirror-state@^1.0.0, prosemirror-state@^1.2.2, prosemirror-state@^1.4.1:
     prosemirror-view "^1.27.0"
 
 prosemirror-transform@^1.0.0, prosemirror-transform@^1.1.0, prosemirror-transform@^1.10.2, prosemirror-transform@^1.7.0, prosemirror-transform@^1.7.3:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/prosemirror-transform/-/prosemirror-transform-1.10.2.tgz#8ebac4e305b586cd96595aa028118c9191bbf052"
-  integrity sha512-2iUq0wv2iRoJO/zj5mv8uDUriOHWzXRnOTVgCzSXnktS/2iQRa3UUQwVlkBlYZFtygw6Nh1+X4mGqoYBINn5KQ==
+  version "1.10.3"
+  resolved "https://registry.yarnpkg.com/prosemirror-transform/-/prosemirror-transform-1.10.3.tgz#fae660bd7ffef3159aff44bc21e9e044aa31b67d"
+  integrity sha512-Nhh/+1kZGRINbEHmVu39oynhcap4hWTs/BlU7NnxWj3+l0qi8I1mu67v6mMdEe/ltD8hHvU4FV6PHiCw2VSpMw==
   dependencies:
     prosemirror-model "^1.21.0"
 
 prosemirror-view@^1.0.0, prosemirror-view@^1.1.0, prosemirror-view@^1.27.0, prosemirror-view@^1.28.0, prosemirror-view@^1.31.0:
-  version "1.38.0"
-  resolved "https://registry.yarnpkg.com/prosemirror-view/-/prosemirror-view-1.38.0.tgz#685a256adc8486ebd0c8652125812b2f8297a2d3"
-  integrity sha512-O45kxXQTaP9wPdXhp8TKqCR+/unS/gnfg9Q93svQcB3j0mlp2XSPAmsPefxHADwzC+fbNS404jqRxm3UQaGvgw==
+  version "1.38.1"
+  resolved "https://registry.yarnpkg.com/prosemirror-view/-/prosemirror-view-1.38.1.tgz#566d30cc8b00a68d6b4c60f5d8a6ab97c82990b3"
+  integrity sha512-4FH/uM1A4PNyrxXbD+RAbAsf0d/mM0D/wAKSVVWK7o0A9Q/oOXJBrw786mBf2Vnrs/Edly6dH6Z2gsb7zWwaUw==
   dependencies:
     prosemirror-model "^1.20.0"
     prosemirror-state "^1.0.0"
@@ -5404,7 +5405,7 @@ typed-array-length@^1.0.7:
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
 
-typedoc@^0.27.6:
+typedoc@^0.27.6, typedoc@^0.27.9:
   version "0.27.9"
   resolved "https://registry.yarnpkg.com/typedoc/-/typedoc-0.27.9.tgz#5e0a7bc32bfc7bd0b70a353f4f1d5cba3d667c46"
   integrity sha512-/z585740YHURLl9DN2jCWe6OW7zKYm6VoQ93H0sxZ1cwHQEQrUn5BJrEnkWhfzUdyO+BLGjnKUZ9iz9hKloFDw==

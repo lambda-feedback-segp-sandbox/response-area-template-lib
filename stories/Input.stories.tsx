@@ -15,6 +15,10 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
       const Component = createInitialisedInput(createTub, args)
       return <Component {...args} />
     },
+    args: {
+      responseAreaId: '00000000-0000-0000-0000-000000000000',
+      universalResponseAreaId: '00000000-0000-0000-0000-000000000000',
+    },
   }
 }
 
