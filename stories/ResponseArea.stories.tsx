@@ -7,6 +7,21 @@ import {
   createInitialisedInput,
 } from '../components'
 
+const defaultDisabledArgTypes = {
+  actionButtonsState: { table: { disable: true } },
+  displayInputSymbols: { table: { disable: true } },
+  displayMode: { table: { disable: true } },
+  feedback: { table: { disable: true } },
+  inFlight: { table: { disable: true } },
+  inputDisplayValue: { table: { disable: true } },
+  inputType: { table: { disable: true } },
+  responseAreaId: { table: { disable: true } },
+  universalResponseAreaId: { table: { disable: true } },
+  showLivePreview: { table: { disable: true } },
+  tub: { table: { disable: true } },
+  visibleSymbols: { table: { disable: true } },
+}
+
 export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
   const shadowTub = createTub()
   const tub = createTub()
@@ -24,28 +39,15 @@ export function createMeta<T extends ResponseAreaTub>(createTub: () => T) {
       inFlight: false,
       inputDisplayValue: [],
       inputType: tub.responseType,
-      preResponseText: 'PRE',
       postResponseText: 'POST',
+      preResponseText: 'PRE',
       responseAreaId: '00000000-0000-0000-0000-000000000000',
       universalResponseAreaId: '00000000-0000-0000-0000-000000000000',
       showLivePreview: true,
       visibleSymbols: [],
       wrapLabel: 'Area Label',
     },
-    argTypes: {
-      actionButtonsState: { table: { disable: true } },
-      displayInputSymbols: { table: { disable: true } },
-      displayMode: { table: { disable: true } },
-      feedback: { table: { disable: true } },
-      inFlight: { table: { disable: true } },
-      inputDisplayValue: { table: { disable: true } },
-      inputType: { table: { disable: true } },
-      responseAreaId: { table: { disable: true } },
-      universalResponseAreaId: { table: { disable: true } },
-      showLivePreview: { table: { disable: true } },
-      visibleSymbols: { table: { disable: true } },
-      tub: { table: { disable: true } },
-    },
+    argTypes: defaultDisabledArgTypes,
   }
 }
 
@@ -65,4 +67,14 @@ export const ExploreActionButtonDisabledStory: Story = {
 
 export const AllActionButtonsDisabledStory: Story = {
   args: { actionButtonsState: ActionButtonsState.AllDisabled },
+}
+
+export const CustomFeedbackStory: Story = {
+  args: { actionButtons: ActionButtonsState.Hidden },
+  argTypes: {
+    ...defaultDisabledArgTypes,
+    postResponseText: { table: { disable: true } },
+    preResponseText: { table: { disable: true } },
+    wrapLabel: { table: { disable: true } },
+  },
 }
