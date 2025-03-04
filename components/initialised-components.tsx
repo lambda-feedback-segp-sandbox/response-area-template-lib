@@ -47,7 +47,7 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
       }
 
       rerender()
-    }, [response])
+    }, [rerender, response])
 
     const handleChange = (newResponse: Response) => {
       sessionStorage.setItem(INPUT_KEY, JSON.stringify(newResponse))
