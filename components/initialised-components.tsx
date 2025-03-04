@@ -86,6 +86,12 @@ export function createInitialisedWizard<T extends ResponseAreaTub>(
     const tub = useRef(createTub())
 
     const [response, setResponse] = useState(() => {
+      const storedResponseJson = sessionStorage.getItem(WIZARD_KEY)
+      if (storedResponseJson) {
+        const parsedResponse = JSON.parse(storedResponseJson)
+        tub.current.initWithResponse(parsedResponse)
+        return parsedResponse
+      }
       tub.current.initWithDefault()
       const initialResponse: IModularResponseSchema = {
         answer: tub.current.answer,
