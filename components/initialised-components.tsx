@@ -36,6 +36,8 @@ export function createInitialisedInput<T extends ResponseAreaTub>(
       if (storedWizardResponseJson) {
         const storedWizardResponse = JSON.parse(storedWizardResponseJson)
         tub.current.initWithStudentFragment(storedWizardResponse)
+      } else {
+        tub.current.initWithDefault()
       }
 
       const storedResponseJson = sessionStorage.getItem(INPUT_KEY)
@@ -85,7 +87,13 @@ export function createInitialisedWizard<T extends ResponseAreaTub>(
 
     const [response, setResponse] = useState(() => {
       tub.current.initWithDefault()
-      return tub.current as IModularResponseSchema
+      const initialResponse: IModularResponseSchema = {
+        answer: tub.current.answer,
+        config: tub.current.config,
+        responseType: tub.current.responseType ?? '',
+      }
+      sessionStorage.setItem(WIZARD_KEY, JSON.stringify(initialResponse))
+      return initialResponse
     })
 
     useEffect(() => {
